@@ -1,0 +1,5 @@
+dependencies:
+  - name: rfrappe
+    version: 0.0.1
+    src: "htmlwidgets/lib/frappe-charts-0.0.1"
+    script: frappe-charts.min.js
