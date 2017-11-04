@@ -42,3 +42,30 @@ rfrappe <- function(options, width = NULL, height = NULL) {
 
   htmlwidgets::createWidget("rfrappe", x, width = width, height = height, package = "rfrappe")
 }
+
+#' Widget render function for use in Shiny
+#'
+#' @param expr An rfrappe expression.
+#' @param env An enviorment.
+#' @param quoted  A boolean value.
+#'
+#' @importFrom htmlwidgets shinyRenderWidget
+#' @export
+renderFrappe <- function(expr, env = parent.frame(), quoted = FALSE) {
+  if (!quoted) {
+    expr <- substitute(expr)
+  } # force quoted
+  shinyRenderWidget(expr, frappeOutput, env, quoted = TRUE)
+}
+
+#' Widget output function for use in Shiny
+#'
+#' @param outputId The name of the input
+#' @param width Must be a valid CSS unit (like "100%", "400px", "auto") or a number, which will be coerced to a string and have "px" appended.
+#' @param height  Must be a valid CSS unit (like "100%", "400px", "auto") or a number, which will be coerced to a string and have "px" appended.
+#'
+#' @importFrom htmlwidgets shinyWidgetOutput
+#' @export
+frappeOutput <- function(outputId, width = "100%", height = "250px") {
+  shinyWidgetOutput(outputId, "frappe", width, height, package = "rfrappe")
+}
