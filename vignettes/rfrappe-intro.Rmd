@@ -50,9 +50,17 @@ rfrappe(list(
 ))
 ```
 
+```{r, fig.height = 4}
+rfrappe(list(
+  title = "My Awesome Pie Chart",
+  data = data,
+  type = "pie"
+))
+```
+
 ```{r}
 rfrappe(list(
-  title = "My Awesome Line Chart",
+  title = "My Awesome Scatter Chart",
   data = data,
   type = "scatter"
 ))
@@ -60,7 +68,7 @@ rfrappe(list(
 
 ```{r}
 rfrappe(list(
-  title = "My Awesome Line Chart",
+  title = "My Awesome Percentage Chart",
   data = data,
   type = "percentage"
 ))

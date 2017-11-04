@@ -29,7 +29,7 @@
 #'
 rfrappe <- function(options, width = NULL, height = NULL) {
 
-  if (is.null(options$type) || !options$type %in% c("bar", "line", "scatter", "percentage")) {
+  if (is.null(options$type) || !options$type %in% c("bar", "line", "scatter", "percentage", "pie")) {
     options$type <- "line"
   }
 
