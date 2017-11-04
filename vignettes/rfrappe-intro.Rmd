@@ -13,7 +13,8 @@ vignette: >
 knitr::opts_chunk$set(fig.width = 9, fig.height = 3)
 ```
 
-```{r}
+```{r, message = FALSE}
+library(dplyr)
 library(rfrappe)
 
 data <- list(
@@ -74,3 +75,18 @@ rfrappe(list(
 ))
 ```
 
+```{r}
+heatmap_data <- rpois(365, 3) %>% as.list()
+time_stamp <- Sys.time() %>% as.numeric() %>% round(0)
+# chnage time to midnight of current day
+time_stamp <- time_stamp - (time_stamp %% 86400)
+# 1 year of days
+time_stamps <- seq(from = time_stamp, by = -86400, length.out = 365)
+names(heatmap_data) <- time_stamps
+
+
+rfrappe(list(
+  data = heatmap_data,
+  type = "heatmap"
+))
+```
