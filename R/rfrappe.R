@@ -3,7 +3,8 @@
 #' create a Frappe chart widget
 #'
 #' @param options list of chart options
-#' @param
+#' @param width does nothing right now
+#' @param height does nothing right now
 #'
 #' @import htmlwidgets
 #' @export
