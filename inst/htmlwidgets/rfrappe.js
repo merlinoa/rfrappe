@@ -6,15 +6,15 @@ HTMLWidgets.widget({
 
   factory: function(el, width, height) {
 
+    let frap = { parent: "#" + el.id };
+
     return {
       renderValue: function(x) {
-        // create our own frappe chart object and bind it to the element
-        let frap = new Chart({
-          parent: "#" + el.id,
-          title: x.title,
-          data: x.data,
-          type: x.type
-        });
+        // create our own frappe chart object and bind it to el
+        for (var name in x) {
+          frap[name] = x[name];
+        }
+        new Chart(frap);
       },
       resize: function(width, height) {
       },
