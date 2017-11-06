@@ -17,6 +17,8 @@ knitr::opts_chunk$set(fig.width = 9, fig.height = 3)
 
 ## Chart Types
 
+### Bar
+
 ```{r, message = FALSE}
 library(dplyr)
 library(rfrappe)
@@ -39,19 +41,25 @@ data <- list(
 )
 
 rfrappe(list(
-  title = "My Awesome Bar Chart",
   data = data,
-  type = "bar"
+  type = "bar",
+  # some optional arguments
+  height = 400,
+  title = "My Awesome Bar Chart"
 ))
 ```
 
-
+### Line
 
 ```{r}
 rfrappe(list(
-  title = "My Awesome Line Chart",
   data = data,
-  type = "line"
+  type = "line",
+  # optional arguments
+  title = "My Awesome Line Chart",
+  show_dots = 0, # 0 for not show, or 1 for show; default 0
+  region_fill = 1, # fill area under the line; default 0
+  heatline = 1 # show a value-wise line gradient; default 0
 ))
 ```
 
@@ -63,6 +71,8 @@ rfrappe(list(
 ))
 ```
 
+### Scatter
+
 ```{r}
 rfrappe(list(
   title = "My Awesome Scatter Chart",
@@ -71,7 +81,9 @@ rfrappe(list(
 ))
 ```
 
-```{r}
+### Percentage
+
+```{r, fig.height=2}
 rfrappe(list(
   title = "My Awesome Percentage Chart",
   data = data,
@@ -79,7 +91,9 @@ rfrappe(list(
 ))
 ```
 
-```{r, warning = FALSE}
+### Heatmap
+
+```{r, warning = FALSE, fig.height=2}
 heatmap_data <- rpois(365, 3) %>% as.list()
 time_stamp <- Sys.time() %>% as.numeric() %>% round(0)
 # chnage time to midnight of current day
@@ -91,6 +105,9 @@ names(heatmap_data) <- time_stamps
 
 rfrappe(list(
   data = heatmap_data,
-  type = "heatmap"
+  type = "heatmap",
+  # optional arguments
+  height = 115,
+  discrete_domains = 1
 ))
 ```

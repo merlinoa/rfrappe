@@ -15,7 +15,7 @@
 <![endif]-->
 </head>
 <body>
-    <div class="container template-home">
+    <div class="container template-vignette">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -59,21 +59,61 @@
 <!--/.navbar -->
 
       
-      </header><div class="row">
-  <div class="contents col-md-9">
-    <div id="rfrappe" class="section level1">
+      </header><script src="index_files/htmlwidgets-0.9/htmlwidgets.js"></script><script src="index_files/rfrappe-0.0.1/frappe-charts.min.iife.js"></script><script src="index_files/rfrappe-binding-0.0.0.9001/rfrappe.js"></script><div class="row">
+  <div class="col-md-9">
+    
+
+    
+    
+<div class="contents">
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+<div id="rfrappe" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#rfrappe" class="anchor"></a>rfrappe</h1></div>
-<div id="warning-not-ready-for-use" class="section level2">
-<h2 class="hasAnchor">
-<a href="#warning-not-ready-for-use" class="anchor"></a>Warning: not ready for use</h2>
 
+<p><code>rfrappe</code> is an R htmlwidget for the <a href="https://github.com/frappe/charts">Frappe Charts</a> JavaScript library. Frappe Charts creates simple, responsive, modern SVG charts with zero dependencies. <code>Frappe Charts</code> and <code>rfrappe</code> are in very early development, so expect breaking changes.</p>
+<div id="installation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"merlinoa/rfrappe"</span>)</code></pre></div>
+</div>
+<div id="usage" class="section level2">
+<h2 class="hasAnchor">
+<a href="#usage" class="anchor"></a>Usage</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(rfrappe)
+
+data &lt;-<span class="st"> </span><span class="kw">list</span>(
+  <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">"12am-3am"</span>, <span class="st">"3am-6pm"</span>, <span class="st">"6am-9am"</span>, <span class="st">"9am-12am"</span>, <span class="st">"12pm-3pm"</span>, 
+             <span class="st">"3pm-6pm"</span>, <span class="st">"6pm-9pm"</span>, <span class="st">"9am-12am"</span>),
+  <span class="dt">datasets =</span> <span class="kw">list</span>(
+    <span class="kw">list</span>(
+      <span class="dt">title =</span> <span class="st">"Some Data"</span>,
+      <span class="dt">color =</span> <span class="st">"light-blue"</span>,
+      <span class="dt">values =</span> <span class="kw">c</span>(<span class="dv">25</span>, <span class="dv">40</span>, <span class="dv">30</span>, <span class="dv">35</span>, <span class="dv">8</span>, <span class="dv">52</span>, <span class="dv">17</span>, <span class="op">-</span><span class="dv">4</span>)
+    ),
+    <span class="kw">list</span>(
+      <span class="dt">title =</span> <span class="st">"Another Set"</span>,
+      <span class="dt">color =</span> <span class="st">"violet"</span>,
+      <span class="dt">values =</span> <span class="kw">c</span>(<span class="dv">25</span>, <span class="dv">50</span>, <span class="op">-</span><span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">18</span>, <span class="dv">32</span>, <span class="dv">27</span>, <span class="dv">14</span>)
+    )
+  )
+)
+
+<span class="kw"><a href="reference/rfrappe.html">rfrappe</a></span>(<span class="kw">list</span>(
+  <span class="dt">title =</span> <span class="st">"My Awesome Bar Chart"</span>,
+  <span class="dt">data =</span> data,
+  <span class="dt">type =</span> <span class="st">"bar"</span>
+))</code></pre></div>
+<div id="htmlwidget-b69b163d976252a217bc" style="width:864px;height:480px;" class="rfrappe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b69b163d976252a217bc">{"x":{"title":"My Awesome Bar Chart","data":{"labels":["12am-3am","3am-6pm","6am-9am","9am-12am","12pm-3pm","3pm-6pm","6pm-9pm","9am-12am"],"datasets":[{"title":"Some Data","color":"light-blue","values":[25,40,30,35,8,52,17,-4]},{"title":"Another Set","color":"violet","values":[25,50,-10,15,18,32,27,14]}]},"type":"bar"},"evals":[],"jsHooks":[]}</script>
+</div>
 </div>
 </div>
   </div>
 
-  <div class="col-md-3" id="sidebar">
-    <h2>License</h2>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2 class="hasAnchor">
+<a href="#sidebar" class="anchor"></a>License</h2>
 <p><a href="https://opensource.org/licenses/mit-license.php">MIT</a></p>
 <h2>Developers</h2>
 <ul class="list-unstyled">
@@ -81,9 +121,10 @@
 </ul>
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/frappe/charts">frappe charts</a></li>
+<li><a href="https://cran.r-project.org/package=rfrappe"><img src="http://www.r-pkg.org/badges/version/pkgdown" alt="CRAN_Status_Badge"></a></li>
 </ul>
 </div>
+
 </div>
 
 
