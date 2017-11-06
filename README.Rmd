@@ -8,7 +8,40 @@ output: github_document
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/pkgdown)](https://cran.r-project.org/package=rfrappe)
 
-## Warning: not ready for use
+`rfrappe` is an R htmlwidget for the [Frappe Charts](https://github.com/frappe/charts) library.  Frappe Charts creates simple, responsive, modern SVG charts with zero dependencies.  The library is in early development, and is evolving quickly, so expect breaking changes. 
 
-R htmlwidget for the [frappe charts](https://github.com/frappe/charts) library 
+## Installation
+
+```{r, eval = FALSE}
+devtools::install_github("merlinoa/rfrappe")
+```
+
+## Usage
+
+```{r}
+library(rfrappe)
+
+data <- list(
+  labels = c("12am-3am", "3am-6pm", "6am-9am", "9am-12am", "12pm-3pm", 
+             "3pm-6pm", "6pm-9pm", "9am-12am"),
+  datasets = list(
+    list(
+      title = "Some Data",
+      color = "light-blue",
+      values = c(25, 40, 30, 35, 8, 52, 17, -4)
+    ),
+    list(
+      title = "Another Set",
+      color = "violet",
+      values = c(25, 50, -10, 15, 18, 32, 27, 14)
+    )
+  )
+)
+
+rfrappe(list(
+  title = "My Awesome Bar Chart",
+  data = data,
+  type = "bar"
+))
+```
 

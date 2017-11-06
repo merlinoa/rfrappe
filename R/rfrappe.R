@@ -43,6 +43,8 @@ rfrappe <- function(options, width = NULL, height = NULL) {
   htmlwidgets::createWidget("rfrappe", x, width = width, height = height, package = "rfrappe")
 }
 
+#' renderFrappe
+#'
 #' Widget render function for use in Shiny
 #'
 #' @param expr An rfrappe expression.
@@ -58,6 +60,8 @@ renderFrappe <- function(expr, env = parent.frame(), quoted = FALSE) {
   htmlwidgets::shinyRenderWidget(expr, frappeOutput, env, quoted = TRUE)
 }
 
+#' frappeOutput
+#'
 #' Widget output function for use in Shiny
 #'
 #' @param outputId The name of the input

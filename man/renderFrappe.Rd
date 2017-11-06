@@ -2,7 +2,7 @@
 % Please edit documentation in R/rfrappe.R
 \name{renderFrappe}
 \alias{renderFrappe}
-\title{Widget render function for use in Shiny}
+\title{renderFrappe}
 \usage{
 renderFrappe(expr, env = parent.frame(), quoted = FALSE)
 }

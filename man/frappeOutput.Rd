@@ -2,7 +2,7 @@
 % Please edit documentation in R/rfrappe.R
 \name{frappeOutput}
 \alias{frappeOutput}
-\title{Widget output function for use in Shiny}
+\title{frappeOutput}
 \usage{
 frappeOutput(outputId, width = "100\%", height = "250px")
 }

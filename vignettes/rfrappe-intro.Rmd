@@ -2,7 +2,9 @@
 title: "Intro to rfrappe"
 author: "Andy Merlino"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_document
+output: 
+  rmarkdown::html_document:
+    code_folding: hide
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
@@ -12,6 +14,8 @@ vignette: >
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(fig.width = 9, fig.height = 3)
 ```
+
+## Chart Types
 
 ```{r, message = FALSE}
 library(dplyr)
@@ -75,7 +79,7 @@ rfrappe(list(
 ))
 ```
 
-```{r}
+```{r, warning = FALSE}
 heatmap_data <- rpois(365, 3) %>% as.list()
 time_stamp <- Sys.time() %>% as.numeric() %>% round(0)
 # chnage time to midnight of current day
