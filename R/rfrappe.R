@@ -55,7 +55,7 @@ renderFrappe <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) {
     expr <- substitute(expr)
   } # force quoted
-  shinyRenderWidget(expr, frappeOutput, env, quoted = TRUE)
+  htmlwidgets::shinyRenderWidget(expr, frappeOutput, env, quoted = TRUE)
 }
 
 #' Widget output function for use in Shiny
@@ -67,5 +67,5 @@ renderFrappe <- function(expr, env = parent.frame(), quoted = FALSE) {
 #' @importFrom htmlwidgets shinyWidgetOutput
 #' @export
 frappeOutput <- function(outputId, width = "100%", height = "250px") {
-  shinyWidgetOutput(outputId, "frappe", width, height, package = "rfrappe")
+  htmlwidgets::shinyWidgetOutput(outputId, "rfrappe", width, height, package = "rfrappe")
 }

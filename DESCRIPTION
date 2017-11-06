@@ -1,6 +1,6 @@
 Package: rfrappe
 Title: R wrapper for the frappe-charts.js library
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: person("Andy", "Merlino", email = "andy.merlino@tychobra.com", role = c("aut", "cre"))
 Description: R htmlwidget bindings to the frappe-charts.js library
 Depends: R (>= 3.4.2)
