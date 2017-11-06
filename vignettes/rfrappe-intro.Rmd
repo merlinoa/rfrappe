@@ -44,7 +44,7 @@ rfrappe(list(
   data = data,
   type = "bar",
   # some optional arguments
-  height = 400,
+  height = 250,
   title = "My Awesome Bar Chart"
 ))
 ```
