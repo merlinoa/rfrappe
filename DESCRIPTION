@@ -15,3 +15,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: http://merlinoa.github.io/rfrappe, https://github.com/merlinoa/rfrappe
+BugReports: https://github.com/merlinoa/rfrappe/issues

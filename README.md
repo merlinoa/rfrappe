@@ -3,7 +3,7 @@
 rfrappe
 =======
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/pkgdown)](https://cran.r-project.org/package=rfrappe)
+[![Build Status](https://travis-ci.org/merlinoa/rfrappe.svg?branch=master)](https://travis-ci.org/merlinoa/rfrappe) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/pkgdown)](https://cran.r-project.org/package=rfrappe)
 
 `rfrappe` is an R htmlwidget for the [Frappe Charts](https://github.com/frappe/charts) JavaScript library. Frappe Charts creates simple, responsive, modern SVG charts with zero dependencies. `Frappe Charts` and `rfrappe` are in very early development, so expect breaking changes.
 
