@@ -14,10 +14,12 @@ HTMLWidgets.widget({
         for (var name in x) {
           frap[name] = x[name];
         }
-        new Chart(frap);
+        frap = new Chart(frap);
       },
       resize: function(width, height) {
       },
+      // return htmlwidget object to be used by e.g. htmlwidgets::onRender()
+      f: frap
     };
   }
 });
