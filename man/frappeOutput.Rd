@@ -9,9 +9,9 @@ frappeOutput(outputId, width = "100\%", height = "250px")
 \arguments{
 \item{outputId}{The name of the input}
 
-\item{width}{Must be a valid CSS unit (like "100%", "400px", "auto") or a number, which will be coerced to a string and have "px" appended.}
+\item{width}{Must be a valid CSS unit (e.g. "400px", "auto") or a number, which will be coerced to a string and have "px" appended.}
 
-\item{height}{Must be a valid CSS unit (like "100%", "400px", "auto") or a number, which will be coerced to a string and have "px" appended.}
+\item{height}{Must be a valid CSS unit (e.g. "400px", "auto") or a number, which will be coerced to a string and have "px" appended.}
 }
 \description{
 Widget output function for use in Shiny

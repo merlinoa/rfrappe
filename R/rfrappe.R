@@ -65,8 +65,8 @@ renderFrappe <- function(expr, env = parent.frame(), quoted = FALSE) {
 #' Widget output function for use in Shiny
 #'
 #' @param outputId The name of the input
-#' @param width Must be a valid CSS unit (like "100%", "400px", "auto") or a number, which will be coerced to a string and have "px" appended.
-#' @param height  Must be a valid CSS unit (like "100%", "400px", "auto") or a number, which will be coerced to a string and have "px" appended.
+#' @param width Must be a valid CSS unit (e.g. "400px", "auto") or a number, which will be coerced to a string and have "px" appended.
+#' @param height  Must be a valid CSS unit (e.g. "400px", "auto") or a number, which will be coerced to a string and have "px" appended.
 #'
 #' @importFrom htmlwidgets shinyWidgetOutput
 #' @export
